@@ -6,7 +6,8 @@ module.exports = {
     "plugin:jest/recommended",
     "plugin:prettier/recommended",
   ],
-  plugins: ["react", "@typescript-eslint", "jest"],
+  root: true,
+  plugins: ["react", "@typescript-eslint", "jest", "import"],
   env: {
     browser: true,
     es6: true,
@@ -34,5 +35,19 @@ module.exports = {
         endOfLine: "auto",
       },
     ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        devDependencies: false,
+        optionalDependencies: false,
+        peerDependencies: false,
+      },
+    ],
+  },
+  ignorePatterns: [".eslintrc.js"],
+  settings: {
+    react: {
+      version: 'latest',
+    },
   },
 };

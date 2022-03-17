@@ -27,6 +27,8 @@ module.exports = {
     project: "./tsconfig.json",
   },
   rules: {
+    "default-param-last": 0,
+    "@typescript-eslint/default-param-last": 0,
     "@typescript-eslint/no-use-before-define": "off",
     "linebreak-style": "off",
     "prettier/prettier": [
@@ -47,7 +49,7 @@ module.exports = {
   ignorePatterns: [".eslintrc.js"],
   settings: {
     react: {
-      version: 'latest',
+      version: "latest",
     },
   },
 };

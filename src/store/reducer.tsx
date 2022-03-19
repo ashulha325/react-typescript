@@ -4,7 +4,6 @@ import { Actions, ActionType } from "./actions";
 export function reducer(state: State, action: Actions) {
   switch (action.type) {
     case ActionType.ACTION_LOGIN:
-      console.log("called");
       return {
         ...state,
         user: action.payload.user,

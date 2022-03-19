@@ -1,3 +1,3 @@
 export type Tchildren = {
-  children: JSX.Element | JSX.Element[];
+  children: JSX.Element | JSX.Element[] | string;
 };

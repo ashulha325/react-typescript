@@ -5,22 +5,23 @@ import Header from "./components/Header/Header";
 import { StoreContext } from "./utils/context";
 import { reducer } from "./store/reducer";
 import { initialState } from "./store/state";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage/Homepage";
 const App: React.FC = () => {
   const [state, dispatch] = React.useReducer(reducer, initialState);
 
   return (
     <StoreContext.Provider value={{ state, dispatch }}>
-      <AppWrapper>
-        <Main>
-          <Header></Header>
-        </Main>
-      </AppWrapper>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Homepage />} />
+        </Routes>
+      </BrowserRouter>
     </StoreContext.Provider>
   );
 };
 
 export default App;
-
-export const AppWrapper = styled.div``;
 
 document.getElementsByTagName("body")[0].setAttribute("data-theme", "dark");

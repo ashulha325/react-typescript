@@ -1,6 +1,4 @@
 import React from "react";
-import { StoreContext } from "../../utils/context";
-import { ACTION_LOGIN } from "../../store/reducer";
 import {
   HeaderInner,
   HeaderLink,
@@ -11,7 +9,6 @@ import {
 import Container from "../Container/Container";
 
 const Header = () => {
-  const { state, dispatch } = React.useContext(StoreContext);
   return (
     <HeaderWrapper>
       <Container>

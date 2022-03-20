@@ -22,13 +22,29 @@ a{
 }
 
 body[data-theme='dark']{
-  --color: #000;
+  --color: #fff;
+  --primary400: #7b6ef6;
   --primary200: #beb7fb;
+  --gray700: #323B54;
+  --gray600: #475069;
+  --gray300: #8e95a9;
   --gray200: #A8AEBF;
+  --gray50: #ebeef5;
+  --black10: rgba(0, 0, 0, 0.1);
 }
 body[data-theme='white']{
   --color: #fff;
+  --primary400: #7b6ef6;
   --primary200: #beb7fb;
+  --gray700: #323B54;
+  --gray600: #475069;
+  --gray300: #8e95a9;
   --gray200: #A8AEBF;
+  --gray50: #ebeef5;
+  --black10: rgba(0, 0, 0, 0.1);
 
+}
+
+*{
+  -webkit-tap-highlight-color: transparent;
 }
